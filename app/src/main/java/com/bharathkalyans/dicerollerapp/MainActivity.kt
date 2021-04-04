@@ -7,6 +7,7 @@ import android.renderscript.ScriptGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,10 +26,13 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun rollDice(){
+    private fun rollDice() {
 
-        var resultText : TextView = findViewById(R.id.resultText)
-        resultText.text = "Dice Rolled"
+        var resultText: TextView = findViewById(R.id.resultText)
+
+        var randomNumber = Random.nextInt(6) + 1
+
+        resultText.text = randomNumber.toString()
 
     }
 }
