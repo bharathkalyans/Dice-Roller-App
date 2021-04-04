@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.renderscript.ScriptGroup
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
@@ -19,9 +20,15 @@ class MainActivity : AppCompatActivity() {
         val rollButton : Button = findViewById(R.id.roll_button)
 
         rollButton.setOnClickListener {
-            Toast.makeText(this,"Dice is Rolling",Toast.LENGTH_SHORT).show()
+            rollDice()
         }
+    }
 
+
+    private fun rollDice(){
+
+        var resultText : TextView = findViewById(R.id.resultText)
+        resultText.text = "Dice Rolled"
 
     }
 }
