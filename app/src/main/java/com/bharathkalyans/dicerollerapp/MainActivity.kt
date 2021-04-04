@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
 
         rollButton.setOnClickListener {
             rollDice()
+
+            Toast.makeText(this, " Random Number Generated", Toast.LENGTH_SHORT)
         }
     }
 
@@ -33,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         var randomNumber = Random.nextInt(6) + 1
 
         resultText.text = randomNumber.toString()
+
 
     }
 }
